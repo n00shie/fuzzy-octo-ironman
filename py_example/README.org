@@ -1,0 +1,8 @@
+* Development Environment
+** Python 3.3.2
+*** ctypes
+    - Used to link with c library
+    - http://docs.python.org/3.3/library/ctypes.html
+** GCC 4.8.1
+   - this version is not avaliable on MAC OS for some reason
+   - see Makefile how to generate shared c library

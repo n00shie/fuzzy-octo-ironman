@@ -1,2 +1,6 @@
 *.o
 *.so
+gnunet/
+gnurl-7.33.0/
+libgcrypt/
+libmicrohttpd-0.9.31/

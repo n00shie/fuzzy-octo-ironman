@@ -39,7 +39,7 @@ cd ..
 cd gnunet
 cd gnunet
 ./bootstrap
-# yes, we use sudo so that NSS support is included; you can also do --with-sudo to let it know you plan to compile it with sudo
+# yes, we use sudo so that NSS support is included; you can also do --with-sudo=yes to let it know you plan to compile it with sudo
 sudo ./configure
 # environment stuff
 sudo groupadd gnunetdns
@@ -60,3 +60,22 @@ cd ..
 # after you are done installing
 gnunet-arm -s
 gnunet-gns-import.sh
+
+#Configuring the GNS nsswitch plugin
+#
+#To use the NSS plugin you have to either install GNS as root or compile GNUnet with the --with-sudo=yes switch.
+#
+#Then you can add gns to your /etc/nsswitch.conf file:
+#
+#
+#...
+#hosts: files gns [NOTFOUND=return] dns
+#...
+#
+#The NOTFOUND=return will ensure that if a .gnunet name is not found in GNS it will not be queried in DNS.
+#
+
+
+# TODO: figure out these issues
+# after setting up nsswitch you need to reload that config and I don't know how to do that, so just reboot
+# after you reboot some environment variable or something gets lost, so run sudo make install again in the gnunet folder to fix it

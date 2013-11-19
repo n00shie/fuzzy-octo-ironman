@@ -23,7 +23,7 @@ ping google.gnu
 # if this fails, go back to the setup script and look up the section about nsswitch
 
 # try adding Viktor to your zome with the nickanme v
-gnunet-namestore -a -n v -i v -type PKEY -V A616CN3BM4LIT3RM83A8NJ78HI2VBJ7NFU8PVK04EID2UJ7PG2LG -e never
+gnunet-namestore -a -n v -i v --type PKEY -V A616CN3BM4LIT3RM83A8NJ78HI2VBJ7NFU8PVK04EID2UJ7PG2LG -e never -z master-zone
 
 # now see if you can resolve Google through him
 ping google.v.gnu

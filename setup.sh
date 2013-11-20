@@ -1,5 +1,5 @@
 # arch only
-sudo yum -S transfig libextractor sqlite
+sudo pacman -S transfig libextractor sqlite
 # read the readme for more dependencies https://gnunet.org/svn/gnunet/README
 
 

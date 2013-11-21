@@ -1,5 +1,5 @@
 # arch only
-sudo yum -S transfig libextractor sqlite
+sudo pacman -S transfig libextractor sqlite
 # read the readme for more dependencies https://gnunet.org/svn/gnunet/README
 
 
@@ -56,6 +56,14 @@ cd ..
 #    gnunet-arm -s
 #to start the peer.  You can then run the various GNUnet-tools as
 #your "normal" user (who should only be in the group 'gnunet')."
+
+# create a default conf file for start up 
+
+# NOTE: as far as I see, this is for client use, such as, gnunet-gtk,
+# gnunet-fs-gtk, not sure if this does anything for cli util. Keep it
+# empty for now
+mkdir ~/.gnunet
+touch ~/.gnunet/gnunet.conf
 
 # after you are done installing
 gnunet-arm -s

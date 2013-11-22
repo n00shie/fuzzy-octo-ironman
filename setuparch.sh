@@ -1,5 +1,6 @@
+#!/bin/bash
 # arch only
-sudo pacman -S transfig libextractor sqlite libunistring
+sudo pacman -S transfig libextractor sqlite wget svn git libunistring
 # read the readme for more dependencies https://gnunet.org/svn/gnunet/README
 
 
@@ -40,14 +41,14 @@ cd gnunet
 cd gnunet
 ./bootstrap
 # yes, we use sudo so that NSS support is included; you can also do --with-sudo=yes to let it know you plan to compile it with sudo
-sudo ./configure
+./configure --with-sudo=yes
 # environment stuff
 sudo groupadd gnunetdns
 sudo useradd gnunet
 # add each user who needs to use gnunet to the gnunet group
 # do this for every user who should be able to use gnunet replacing v with the username
 sudo usermod -aG "gnunet,v" v
-# make screwes up if you don't do this
+# make screwes up if you don't do this first
 ./contrib/pogen.sh
 # make and install
 sudo make install
@@ -85,19 +86,3 @@ gnunet-gns-import.sh
 #The NOTFOUND=return will ensure that if a .gnunet name is not found in GNS it will not be queried in DNS.
 #
 
-
-# TODO: figure out these issues
-# after setting up nsswitch you need to reload that config and I don't know how to do that, so just reboot
-# after you reboot some environment variable or something gets lost, so run sudo make install again in the gnunet folder to fix it
-
-# ----------------------
-# gnunet-gtk
-
-cd gnunet/gnunet-gtk
-./bootstrap
-# (fish specific)
-setenv PKG_CONFIG_PATH /home/v/dev/fuzzy-octo-ironman/gnunet/gnunet/pkgconfig
-./configure
-make
-sudo make install
-cd ../..

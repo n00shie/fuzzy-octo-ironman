@@ -4,7 +4,7 @@ sudo pacman -S transfig libextractor sqlite
 
 
 #fetch things you need
-svn checkout https://gnunet.org/svn/ gnunet
+svn checkout https://gnunet.org/svn/ gnunet -r 30813
 git clone git://git.gnupg.org/libgcrypt.git
 wget https://gnunet.org/sites/default/files/gnurl-7.33.0.tar_0.bz2
 tar -xvf gnurl-7.33.0.tar_0.bz2

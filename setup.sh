@@ -1,5 +1,7 @@
-# arch only
+# arch only:
 sudo pacman -S transfig libextractor sqlite libunistring
+# ubuntu only:
+sudo apt-get install transfig-dev libextractor-dev sqlite-dev
 # read the readme for more dependencies https://gnunet.org/svn/gnunet/README
 
 
@@ -25,8 +27,7 @@ make
 sudo make install
 cd ..
 
-# compile libgcrypt
-
+# libgcrypt
 cd libgcrypt
 automake --add-missing
 ./autogen.sh
@@ -40,16 +41,20 @@ cd gnunet
 cd gnunet
 ./bootstrap
 # yes, we use sudo so that NSS support is included; you can also do --with-sudo=yes to let it know you plan to compile it with sudo
-sudo ./configure
+./configure --with-sudo=yes
 # environment stuff
 sudo groupadd gnunetdns
+# or on ubuntu: sudo addgroup gnunetdns
 sudo useradd gnunet
+# or on ubuntu: sudo adduser gnunet
+# UBUNTU ONLY: ./contrib/pogen.sh
 # add each user who needs to use gnunet to the gnunet group
 # do this for every user who should be able to use gnunet replacing v with the username
 sudo usermod -aG "gnunet,v" v
 # make screwes up if you don't do this
 ./contrib/pogen.sh
 # make and install
+sudo make
 sudo make install
 cd ..
 cd ..

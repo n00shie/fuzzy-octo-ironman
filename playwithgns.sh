@@ -24,6 +24,8 @@ ping google.gnu
 
 # try adding Viktor to your zome with the nickanme v
 gnunet-namestore -a -n v -i v --type PKEY -V A616CN3BM4LIT3RM83A8NJ78HI2VBJ7NFU8PVK04EID2UJ7PG2LG -e never -z master-zone
+gnunet-namestore -a -n rui -i rui --type PKEY -V 6V4NA95P2LA2J67V2OLK6A95ESQKMVDHS3M3PLTIM3A76BFD5E3G -e never -z master-zone
+
 
 # now see if you can resolve Google through him
 ping google.v.gnu

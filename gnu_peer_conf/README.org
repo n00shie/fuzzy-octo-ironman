@@ -1,5 +1,5 @@
 ** start two peers config
    1. mkdir ~/gnunet1
    2. mkdir ~/gnunet2
-   3. peerinfo -c peer1.conf -s
-   4. peerinfo -c peer2.conf -s
+   3. gnunet-arm -c peer1.conf -s
+   4. gnunet-arm -c peer2.conf -s

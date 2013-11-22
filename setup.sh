@@ -87,3 +87,15 @@ gnunet-gns-import.sh
 # TODO: figure out these issues
 # after setting up nsswitch you need to reload that config and I don't know how to do that, so just reboot
 # after you reboot some environment variable or something gets lost, so run sudo make install again in the gnunet folder to fix it
+
+# ----------------------
+# gnunet-gtk
+
+cd gnunet/gnunet-gtk
+./bootstrap
+# (fish specific)
+setenv PKG_CONFIG_PATH /home/v/dev/fuzzy-octo-ironman/gnunet/gnunet/pkgconfig
+./configure
+make
+sudo make install
+cd ../..

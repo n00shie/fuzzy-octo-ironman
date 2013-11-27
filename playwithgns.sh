@@ -16,7 +16,7 @@ gnunet-identity -d
 gnunet-identity -C "new_zone"
 
 # create an entry for google
-gnunet-namestore -z master-zone -a -n google -t A -V 74.125.226.132 -e never
+gnunet-namestore -z master-zone -a -n google -t A -V 74.125.226.132 -e never -p
 
 # test the setup
 ping google.gnu

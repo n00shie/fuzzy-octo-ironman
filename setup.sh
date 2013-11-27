@@ -1,7 +1,7 @@
 # arch only:
 sudo pacman -S transfig libextractor sqlite libunistring
 # ubuntu only:
-sudo apt-get install transfig-dev libextractor-dev sqlite-dev
+sudo apt-get install transfig-dev libextractor-dev sqlite-dev libidn11-dev
 # read the readme for more dependencies https://gnunet.org/svn/gnunet/README
 
 

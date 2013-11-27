@@ -6,7 +6,7 @@ sudo apt-get install transfig-dev libextractor-dev sqlite-dev
 
 
 #fetch things you need
-svn checkout https://gnunet.org/svn/ gnunet -r 30813
+svn checkout https://gnunet.org/svn/ gnunet -r 30861
 git clone git://git.gnupg.org/libgcrypt.git
 wget https://gnunet.org/sites/default/files/gnurl-7.33.0.tar_0.bz2
 tar -xvf gnurl-7.33.0.tar_0.bz2

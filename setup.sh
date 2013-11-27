@@ -1,7 +1,7 @@
 # arch only:
 sudo pacman -S transfig libextractor sqlite libunistring
 # ubuntu only:
-sudo apt-get install xfig libextractor-dev libidn11-dev zlib1g-dev libsqlite3-dev
+sudo apt-get install xfig libextractor-dev libidn11-dev zlib1g-dev libsqlite3-dev libgnutls28-dev
 # read the readme for more dependencies https://gnunet.org/svn/gnunet/README
 
 

@@ -1,5 +1,11 @@
 #!/usr/bin/bash
 
+#gnunet-arm -e -c peer1.conf
+#gnunet-arm -e -c peer2.conf
+
+rm -rf ~/gnunet1/*
+rm -rf ~/gnunet2/*
+
 gnunet-arm -s -c peer1.conf
 gnunet-arm -s -c peer2.conf
 

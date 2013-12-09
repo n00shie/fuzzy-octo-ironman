@@ -1,12 +1,12 @@
 # arch only:
 sudo pacman -S transfig libextractor sqlite libunistring
 # ubuntu only:
-sudo apt-get install transfig-dev libextractor-dev sqlite-dev
+sudo apt-get install xfig libextractor-dev libidn11-dev zlib1g-dev libsqlite3-dev libgnutls28-dev
 # read the readme for more dependencies https://gnunet.org/svn/gnunet/README
 
 
 #fetch things you need
-svn checkout https://gnunet.org/svn/ gnunet -r 30813
+svn checkout https://gnunet.org/svn/ gnunet -r 30861
 git clone git://git.gnupg.org/libgcrypt.git
 wget https://gnunet.org/sites/default/files/gnurl-7.33.0.tar_0.bz2
 tar -xvf gnurl-7.33.0.tar_0.bz2
